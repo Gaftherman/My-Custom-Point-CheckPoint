@@ -43,5 +43,5 @@ Now, if you start a map with this script installed, you will noticed a counter a
 
 This counter will increase according to how many checkpoints have been taken and will decrease depending on how many times you have respawned (to respawn you need to be dead and press you +alt1 key binded).
 
-
+![](https://i.imgur.com/PlNVsZJ.gif)
 
