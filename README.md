@@ -37,12 +37,11 @@ And there is, you installed my Custom Point CheckPoint. 🎉🎉🎉🎉🎉🎉
 
 In this modification/creation made by me, taking as a problem that the original checkpoint is very accessible for trolling, I decided to create my own kind of checkpoint.
 
-Each time a player takes this type of checkpoint, his counter will be increased by +1.
+Now, if you start a map with this script installed, you will noticed a counter at the top left. 
 
-![](https://i.imgur.com/F3g9T4L.png)
-![](https://i.imgur.com/34l0CCx.png)
-![](https://i.imgur.com/WkOJ8El.png)
+![](https://i.imgur.com/QxCsUDO.png)
 
-Now, when you are spectating, you can press your +alt1 key to respawn.
+This counter will increase according to how many checkpoints have been taken and will decrease depending on how many times you have respawned (to respawn you need to be dead and press you +alt1 key binded).
+
 
 
