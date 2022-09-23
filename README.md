@@ -49,5 +49,15 @@ And will decrease depending on how many times you have respawned (to respawn you
 
 ![Suicide and Respawn](https://user-images.githubusercontent.com/71413659/191894060-63a488bc-792c-466d-a5d4-40a1625e3ac8.gif)
 
->⚠️This counter is personal, by this I mean that if they take 2 checkpoints and you used 1, you will have 1 checkpoint to respawn while your teammates will have 2 more to respawn.
+## ⚠️Things to know
 
+- This counter is personal, by this I mean that if they take 2 checkpoints and you used 1, you will have 1 checkpoint remaning to respawn while your teammates will have 2 to respawn.
+
+- As you can see in the gif, they respawn according to the order of the checkpoints that have been taken.
+
+## Credits
+
+* Mikk for the feedback [Mikk github](https://github.com/Mikk155)
+
+Any features/feedback to add please contact me `Gaftherman#0231` or join to this discord channel [Discord server](https://discord.gg/VsNnE3A7j8).
+Thx for read this :D
