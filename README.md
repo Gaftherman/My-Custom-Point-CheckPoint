@@ -11,7 +11,7 @@ That should look like this:
 └── 📁svencoop
     └── 📁scripts
         └── 📁maps
-            └── 📁Gaftherman
+            └── 📁gaftherman
                 ├── 📄point_checkpoint.as
                 └── 📁pcp_misc   
                     ├── 📄think.as
@@ -23,7 +23,7 @@ Now, in you map script you need to add:
 
 ```angelscript
 
-#include "Gaftherman/point_checkpoint"
+#include "gaftherman/point_checkpoint"
 
 void MapInit()
 {
