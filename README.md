@@ -57,6 +57,7 @@ And will decrease depending on how many times you have respawned (to respawn you
 
 ## Credits
 
+* Sven Co-op team for the original CheckPoint entity
 * Mikk for the feedback [Mikk github](https://github.com/Mikk155)
 
 Any features/feedback to add please contact me `Gaftherman#0231` or join to this discord channel [Discord server](https://discord.gg/VsNnE3A7j8).
