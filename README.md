@@ -41,7 +41,13 @@ Now, if you start a map with this script installed, you will noticed a counter a
 
 ![](https://i.imgur.com/QxCsUDO.png)
 
-This counter will increase according to how many checkpoints have been taken and will decrease depending on how many times you have respawned (to respawn you need to be dead and press you +alt1 key binded).
+This counter will increase according to how many checkpoints have been taken.
 
-![Animation5](https://user-images.githubusercontent.com/71413659/191890921-6bc774fd-902b-40f8-9f34-81f074ce8339.gif)
+![Picking CP](https://user-images.githubusercontent.com/71413659/191890921-6bc774fd-902b-40f8-9f34-81f074ce8339.gif)
+
+And will decrease depending on how many times you have respawned (to respawn you need to be dead, have at least 1 checkpoint taken and press you +alt1 key binded).
+
+![Suicide and Respawn](https://user-images.githubusercontent.com/71413659/191894060-63a488bc-792c-466d-a5d4-40a1625e3ac8.gif)
+
+>⚠️This counter is personal, by this I mean that if they take 2 checkpoints and you used 1, you will have 1 checkpoint to respawn while your teammates will have 2 more to respawn.
 
