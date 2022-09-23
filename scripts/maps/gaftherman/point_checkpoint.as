@@ -14,9 +14,9 @@ class point_checkpoint : ScriptBaseAnimating
     dictionary dicPlayerSaved, dicNewCheckpoint;
     EHandle hCreatedCheckPoint = null;
 
-    string ActivationMusic = "../media/valve.mp3";
-    string PlayerSpawnSound = "debris/beamstart7.wav";
-    string SpawnSprite = "sprites/exit1.spr";
+    string ActivationMusic = '../media/valve.mp3';
+    string PlayerSpawnSound = 'debris/beamstart7.wav';
+    string SpawnSprite = 'sprites/exit1.spr';
 
     float DelayBeforeReactivation = 0.0f;
 
@@ -154,8 +154,8 @@ class point_checkpoint : ScriptBaseAnimating
                     if(!PCP_MISC::IsEnabled(self))
                         return;
 
-                    g_Game.AlertMessage( at_logged, "CHECKPOINT: \"%1\" activated Checkpoint\n", (pActivator is null) ? string_t('\'The world\'') : pActivator.pev.netname );
-                    g_PlayerFuncs.ClientPrintAll( HUD_PRINTTALK, "" + ((pActivator is null) ? string_t('\'The world\'') : string_t('\''+pActivator.pev.netname+'\'')) + " just activated a Respawn-Point.\n" );
+                    g_Game.AlertMessage( at_logged, "CHECKPOINT: \"%1\" activated Checkpoint\n", (pActivator is null) ? string_t("\"The world\"") : pActivator.pev.netname );
+                    g_PlayerFuncs.ClientPrintAll( HUD_PRINTTALK, "" + ((pActivator is null) ? string_t("\"The world\"") : string_t("\""+pActivator.pev.netname+"\"")) + " just activated a Respawn-Point.\n" );
 
                     self.pev.frags = 1.0f;
 
@@ -173,14 +173,14 @@ class point_checkpoint : ScriptBaseAnimating
                         pData.max_health = pPlayer.pev.max_health;
                         pData.armor = pPlayer.pev.armorvalue;
                         pData.max_armor = pPlayer.pev.armortype;
-                        pData.spawn_number = PCP_MISC::SetAndGetData(PCP_MISC::GetSteamID(pPlayer) + "_spawn_number", +1);
+                        pData.spawn_number = PCP_MISC::SetAndGetData(PCP_MISC::GetSteamID(pPlayer) + '_spawn_number', +1);
 
-                        PCP_MISC::SetCKV( pPlayer, "$i_pcp_spawns", +1 ); 
+                        PCP_MISC::SetCKV( pPlayer, '$i_pcp_spawns', +1 ); 
                     }
 
                     self.SUB_UseTargets(pActivator, useType, flValue);
 
-                    if(string(self.m_iszKillTarget) != "" && string(self.m_iszKillTarget) != self.GetTargetname())
+                    if(string(self.m_iszKillTarget) != '' && string(self.m_iszKillTarget) != self.GetTargetname())
                     {
                         do g_EntityFuncs.Remove(g_EntityFuncs.FindEntityByTargetname(null, string( self.m_iszKillTarget)));
                         while(g_EntityFuncs.FindEntityByTargetname(null, string(self.m_iszKillTarget)) !is null);
@@ -233,15 +233,15 @@ class point_checkpoint : ScriptBaseAnimating
         {
             hCreatedCheckPoint.GetEntity().pev.dmg = 1.0f;
             hCreatedCheckPoint.GetEntity().pev.effects |= EF_NODRAW;
-            hCreatedCheckPoint.GetEntity().pev.targetname = "";
-            hCreatedCheckPoint.GetEntity().pev.netname = "";
+            hCreatedCheckPoint.GetEntity().pev.targetname = '';
+            hCreatedCheckPoint.GetEntity().pev.netname = '';
         }
         else 
         {
             self.pev.dmg = 1.0f;
             self.pev.effects |= EF_NODRAW;
-            self.pev.targetname = "";
-            self.pev.netname = "";
+            self.pev.targetname = '';
+            self.pev.netname = '';
         }
 
         if(self.pev.iuser2 == 0) 
