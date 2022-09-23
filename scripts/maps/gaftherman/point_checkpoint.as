@@ -154,8 +154,8 @@ class point_checkpoint : ScriptBaseAnimating
                     if(!PCP_MISC::IsEnabled(self))
                         return;
 
-                    g_Game.AlertMessage( at_logged, "CHECKPOINT: \"%1\" activated Checkpoint\n", (pActivator is null) ? string_t("\"The world\"") : pActivator.pev.netname );
-                    g_PlayerFuncs.ClientPrintAll( HUD_PRINTTALK, "" + ((pActivator is null) ? string_t("\"The world\"") : string_t("\""+pActivator.pev.netname+"\"")) + " just activated a Respawn-Point.\n" );
+                    g_Game.AlertMessage( at_logged, "CHECKPOINT: \"%1\" activated Checkpoint\n", (pActivator is null) ? string_t('\'The world\'') : pActivator.pev.netname );
+                    g_PlayerFuncs.ClientPrintAll( HUD_PRINTTALK, "" + ((pActivator is null) ? string_t('\'The world\'') : string_t('\''+pActivator.pev.netname+'\'')) + " just activated a Respawn-Point.\n" );
 
                     self.pev.frags = 1.0f;
 
