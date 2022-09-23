@@ -61,7 +61,7 @@ namespace PCP_MISC
 	void FindPlayerEquip(CBasePlayer@ pPlayer, CBaseEntity@ pEntity)
 	{
 		CBaseEntity@ pEquipEntity = null;
-		while((@pEquipEntity = g_EntityFuncs.FindEntityByClassname(pEquipEntity, "game_player_equip")) !is null)
+		while((@pEquipEntity = g_EntityFuncs.FindEntityByClassname(pEquipEntity, 'game_player_equip')) !is null)
 			pEquipEntity.Use(pPlayer, pEntity, USE_TOGGLE);
 	}
 
@@ -72,13 +72,13 @@ namespace PCP_MISC
 		SpawnCountHudText.x = 0.05;
 		SpawnCountHudText.y = 0.05;
 		SpawnCountHudText.effect = 0;
-		SpawnCountHudText.r1 = (GetCKV(pPlayer,"$i_pcp_spawns") > 0) ? RGBA_SVENCOOP.r : RGBA_RED.r;
-		SpawnCountHudText.g1 = (GetCKV(pPlayer,"$i_pcp_spawns") > 0) ? RGBA_SVENCOOP.g : RGBA_RED.g;
-		SpawnCountHudText.b1 = (GetCKV(pPlayer,"$i_pcp_spawns") > 0) ? RGBA_SVENCOOP.b : RGBA_RED.b;
+		SpawnCountHudText.r1 = (GetCKV(pPlayer,'$i_pcp_spawns') > 0) ? RGBA_SVENCOOP.r : RGBA_RED.r;
+		SpawnCountHudText.g1 = (GetCKV(pPlayer,'$i_pcp_spawns') > 0) ? RGBA_SVENCOOP.g : RGBA_RED.g;
+		SpawnCountHudText.b1 = (GetCKV(pPlayer,'$i_pcp_spawns') > 0) ? RGBA_SVENCOOP.b : RGBA_RED.b;
 		SpawnCountHudText.a1 = 0;
-		SpawnCountHudText.r2 = (GetCKV(pPlayer,"$i_pcp_spawns") > 0) ? RGBA_SVENCOOP.r : RGBA_RED.r;
-		SpawnCountHudText.g2 = (GetCKV(pPlayer,"$i_pcp_spawns") > 0) ? RGBA_SVENCOOP.g : RGBA_RED.g;
-		SpawnCountHudText.b2 = (GetCKV(pPlayer,"$i_pcp_spawns") > 0) ? RGBA_SVENCOOP.b : RGBA_RED.b;
+		SpawnCountHudText.r2 = (GetCKV(pPlayer,'$i_pcp_spawns') > 0) ? RGBA_SVENCOOP.r : RGBA_RED.r;
+		SpawnCountHudText.g2 = (GetCKV(pPlayer,'$i_pcp_spawns') > 0) ? RGBA_SVENCOOP.g : RGBA_RED.g;
+		SpawnCountHudText.b2 = (GetCKV(pPlayer,'$i_pcp_spawns') > 0) ? RGBA_SVENCOOP.b : RGBA_RED.b;
 		SpawnCountHudText.a2 = 0;
 		SpawnCountHudText.fadeinTime = 0; 
 		SpawnCountHudText.fadeoutTime = 0;
@@ -86,17 +86,17 @@ namespace PCP_MISC
 		SpawnCountHudText.fxTime = 0;
 		SpawnCountHudText.channel = 0;
 
-		g_PlayerFuncs.HudMessage(pPlayer, SpawnCountHudText, "Spawns: " + GetCKV(pPlayer,"$i_pcp_spawns"));
+		g_PlayerFuncs.HudMessage(pPlayer, SpawnCountHudText, 'Spawns: ' + GetCKV(pPlayer,'$i_pcp_spawns'));
 	}
 
 	void CreatePlayerSpawnEffect(Vector pos)
 	{
-		CSprite@ m_pSprite = g_EntityFuncs.CreateSprite( "sprites/exit1.spr", pos, true, 10 );
+		CSprite@ m_pSprite = g_EntityFuncs.CreateSprite( 'sprites/exit1.spr', pos, true, 10 );
 		m_pSprite.TurnOn();
 		m_pSprite.pev.rendermode = kRenderTransAdd;
 		m_pSprite.pev.renderamt = 128;
 
-		g_Scheduler.SetTimeout( "KillSprite", 3.0f, @m_pSprite );
+		g_Scheduler.SetTimeout( 'KillSprite', 3.0f, @m_pSprite );
 	}
 
 	void KillSprite(CSprite@ m_pSprite)
@@ -161,12 +161,12 @@ namespace PCP_MISC
 		pDictionary.set('maxhullsize', (pEntity.pev.vuser2).ToString());
 		pDictionary.set('music', music);
 		pDictionary.set('sprite', sprite);
-		pDictionary.set('DelayBeforeReactivation', "" + DelayBeforeReactivation);
-		pDictionary.set('spawnflags', "" + spfgs);
-		pDictionary.set('model', "" + pEntity.pev.model);
-		pDictionary.set('netname', "" + pEntity.pev.netname);
-		pDictionary.set('targetname', "" + pEntity.pev.targetname);
-		pDictionary.set('target', "" + pEntity.pev.target);
+		pDictionary.set('DelayBeforeReactivation', '' + DelayBeforeReactivation);
+		pDictionary.set('spawnflags', '' + spfgs);
+		pDictionary.set('model', '' + pEntity.pev.model);
+		pDictionary.set('netname', '' + pEntity.pev.netname);
+		pDictionary.set('targetname', '' + pEntity.pev.targetname);
+		pDictionary.set('target', '' + pEntity.pev.target);
 
 		return pDictionary;
 	}
