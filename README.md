@@ -27,7 +27,7 @@ Now, in you map script you need to add:
 
 void MapInit()
 {
-    RegisterPointCheckpoint(); 
+    RegisterPointCheckPointEntity(); 
 }
 ```
 
